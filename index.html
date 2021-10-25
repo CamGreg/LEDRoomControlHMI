@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cam's Light Control</title>
+
+  <meta name="description" content="Web control of the microcontrollers driving the LED's in camerons room">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+
+
+  <!-- Add your site or application content here -->
+  <H1>LED Control</H1>
+
+  <table>
+    <tr>
+      <td>
+        <H2>Room</h2>
+      </td>
+      <td><button id="toggleButton" enabled>Toggle</button></td>
+      <td><canvas id="led" width="50" height="50"></canvas></td>
+    </tr>
+  </table>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="RoomPec">
+    <input type="range" min="0" max="1530" value="50" class="slider sliderRGB" id="RoomRGB">
+  </div>
+
+  <H2>Bed</h2>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="BedPec">
+    <input type="range" min="0" max="1530" value="50" class="slider sliderRGB" id="BedRGB">
+  </div>
+
+</body>
+
+<!-- Call script Last to allow listeners to attach properly -->
+<script src="js/main.js"></script>
+
+</html>
